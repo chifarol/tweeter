@@ -1,0 +1,20 @@
+.tweet-button-container {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #2f80ed;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  z-index: 101;
+}
+
+.tweet-button-container > svg {
+  width: 24px;
+  fill: #fff;
+  z-index: 101;
+}

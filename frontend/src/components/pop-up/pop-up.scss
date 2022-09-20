@@ -1,0 +1,35 @@
+.header-pop-up {
+  width: 190px;
+  padding: 12px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #fff;
+  z-index: 10;
+  border-radius: 12px;
+  font-weight: 500;
+  position: absolute;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+  top: 80px;
+  right: 40px;
+}
+.header-pop-up-divider {
+  border: 1px solid #e0e0e0;
+}
+.header-pop-up-item:active {
+  background-color: #f2f2f2;
+}
+.header-pop-up-item {
+  cursor: pointer;
+  border-radius: 8px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}
+.header-pop-up-item svg {
+  margin-right: 13px;
+  height: 16px;
+}

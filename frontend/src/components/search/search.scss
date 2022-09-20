@@ -1,0 +1,42 @@
+.search-box {
+  height: 54px;
+  width: 100%;
+  background: #fff;
+  position: relative;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  padding: 4px 25px;
+  display: flex;
+  align-items: center;
+}
+.search-box input {
+  padding: 0 15px;
+  width: 100%;
+  border: none;
+}
+.search-box input:focus,
+.search-box input:active {
+  border: none;
+  outline: none;
+}
+.search-box svg {
+  position: absolute;
+  height: 20px;
+  left: 0;
+}
+.search-box button {
+  cursor: pointer;
+  position: absolute;
+  height: 20px;
+  right: 15px;
+  background: #2f80ed;
+  padding: 4px 20px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 12px;
+  border-radius: 4px;
+  height: 32px;
+}

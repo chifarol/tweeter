@@ -1,0 +1,252 @@
+.timeline-container {
+  min-width: 500px;
+}
+.timeline-spinner {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  margin: 20px;
+}
+.timeline-card {
+  border-radius: 12px;
+  height: auto;
+  padding: 20px;
+  background-color: #fff;
+  margin-bottom: 25px;
+}
+.timeline-card svg {
+  fill: #4f4f4f;
+}
+.timeline-top {
+  display: flex;
+  height: 50px;
+  align-items: center;
+}
+
+.timeline-tweet-author-pic {
+  height: 40px;
+  width: 40px;
+  border-radius: 8px;
+  margin-right: 8px;
+}
+
+.timeline-tweet-info {
+  display: flex;
+  flex-direction: column;
+}
+.timeline-tweet-options-trigger {
+  margin-left: auto;
+  position: relative;
+}
+.timeline-tweet-options {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  bottom: 55px;
+  right: 0;
+  min-width: 100px;
+  align-items: flex-start;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  background: #fff;
+}
+.timeline-tweet-options > span {
+  padding: 8px;
+  display: block;
+  width: 100%;
+  border-radius: 4px;
+}
+.timeline-tweet-options > span:hover {
+  background-color: #f2f2f2;
+}
+.timeline-middle-tweet-body {
+  margin: 10px 0;
+  font-weight: 400;
+}
+.timeline-middle-tweet-image-container {
+  display: grid;
+  gap: 10px;
+  overflow: hidden;
+  grid-auto-rows: 150px;
+}
+.grid-1 {
+  grid-template-columns: 1fr;
+}
+.grid-2,
+.grid-4 {
+  grid-template-columns: 1fr 1fr;
+}
+.grid-3 {
+  grid-template-areas:
+    "one two"
+    "three two";
+}
+.grid-3 > div.timeline-middle-tweet-image-1 {
+  grid-area: one;
+}
+.grid-3 > div.timeline-middle-tweet-image-2 {
+  grid-area: two;
+}
+.grid-3 > div.timeline-middle-tweet-image-3 {
+  grid-area: three;
+}
+.timeline-middle-tweet-image-container > div {
+  background: #f2f2f2;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.timeline-middle-tweet-image-container img {
+  background: #f2f2f2;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.timeline-bottom {
+  display: flex;
+  flex-direction: column;
+}
+.timeline-bottom-top {
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin: 12px 0;
+  span {
+    margin: 0 6px;
+  }
+}
+.timeline-bottom-middle {
+  // height: 50px;
+  width: 100%;
+  border-top: 1px solid #f2f2f2;
+  border-bottom: 1px solid #f2f2f2;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  padding: 5px 0;
+}
+.timeline-bottom-middle-item {
+  display: flex;
+  width: 100%;
+  margin: 0 10px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.like-icon > svg {
+  fill: none !important;
+  stroke: #4f4f4f;
+  stroke-width: 3px;
+}
+.like {
+  color: #eb5757;
+}
+.like svg {
+  fill: #eb5757 !important;
+  stroke: none;
+}
+.retweet {
+  color: #27ae60;
+}
+.retweet svg {
+  fill: #27ae60;
+}
+.bookmark {
+  color: #2d9cdb;
+}
+.bookmark svg {
+  fill: #2d9cdb;
+}
+.timeline-bottom-middle-item:hover {
+  background-color: #f2f2f2;
+}
+.timeline-bottom-middle-item svg {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.timeline-bottom-bottom {
+  display: flex;
+  margin-top: 12px;
+}
+.timeline-bottom-bottom-pic {
+  height: 40px;
+  width: 40px;
+  border-radius: 8px;
+  margin-right: 15px;
+}
+.timeline-bottom-bottom-message-box {
+  flex-grow: 1;
+  position: relative;
+}
+.timeline-bottom-bottom-message-box svg {
+  cursor: pointer;
+}
+.timeline-bottom-bottom-message-box > div {
+  display: flex;
+  align-items: center;
+}
+.timeline-bottom-bottom-with-spinner {
+  position: relative;
+  margin-left: 10px;
+}
+.timeline-bottom-bottom-images-container {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 46px 46px 46px 46px;
+}
+
+.timeline-bottom-bottom-images-container img {
+  margin-right: 5px;
+  height: 46px;
+}
+#timeline-card-upload-pix {
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+.timeline-bottom-bottom-message-box div svg {
+  fill: #2d9cdb;
+}
+.timeline-bottom-bottom-message-box div textarea {
+  background-color: #fafafa;
+  flex-grow: 1;
+  border: none;
+  border-radius: 8px;
+  padding: 15px;
+}
+.timeline-bottom-bottom-message-box textarea:focus {
+  border: none;
+  outline: none;
+}
+.timeline-bottom-bottom-image-icon {
+  position: absolute;
+  height: 20px;
+  bottom: 10px;
+  right: 13px;
+  cursor: pointer;
+}
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #bdbdbd;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #bdbdbd;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #bdbdbd;
+}

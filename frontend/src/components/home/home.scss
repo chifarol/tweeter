@@ -1,0 +1,8 @@
+.right-sidebar-style {
+  display: grid;
+  grid-template-columns: 2.4fr 1fr;
+  column-gap: 24px;
+}
+.right-sidebar > div {
+  margin-bottom: 26px;
+}

@@ -1,0 +1,57 @@
+.reply-card-container {
+  margin-top: 10px;
+  padding: 20px 0;
+  border-top: 1px solid #f2f2f2;
+}
+.reply-card-item {
+  display: flex;
+  margin-bottom: 18px;
+}
+.reply-card-item img {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+  border-radius: 4px;
+}
+.reply-card-right {
+  flex-grow: 1;
+  padding: 15px;
+  background-color: #fafafa;
+  border-radius: 8px;
+}
+.reply-card-info {
+  display: flex;
+  align-items: center;
+}
+.reply-card-info h4 {
+  font-size: 14px;
+}
+.reply-card-info span {
+  margin: 0 10px;
+  color: #bdbdbd;
+  font-size: 12px;
+  font-weight: 500;
+}
+.reply-card-text {
+  margin: 8px 0;
+  width: 100%;
+  color: #4f4f4f;
+  font-weight: normal;
+}
+.reply-card-interact {
+  display: flex;
+  align-items: center;
+}
+.reply-card-interact > div {
+  display: flex;
+  align-items: center;
+}
+
+.reply-card-interact svg {
+  margin-right: 8px;
+  cursor: pointer;
+}
+.reply-card-interact span {
+  margin-right: 10px;
+}
