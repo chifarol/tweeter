@@ -3,7 +3,7 @@
 set -o errexit
 
 pip install --upgrade pip
-pip uninstall setuptools
+pip install --upgrade distribute 
 pip install --upgrade setuptools wheel
 poetry install
 
