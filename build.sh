@@ -3,8 +3,7 @@
 set -o errexit
 
 pip install --upgrade pip
-pip install --upgrade distribute 
-pip install --upgrade setuptools wheel
+pip install --force-reinstall -U setuptools
 poetry install
 
 python manage.py collectstatic --no-input
