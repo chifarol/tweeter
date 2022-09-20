@@ -4,15 +4,18 @@ import { useNavigate } from "react-router-dom";
 
 // initialize user context
 const UserContext = createContext();
+// config object for api
+let apiConfig = {};
 // user info from local storage
 const userLocal = JSON.parse(localStorage.getItem("user"));
-// config object for api
-const apiConfig = {
-  headers: {
+if (!userLocal.token || !userLocal.auth) {
+  navigate("/login");
+} else {
+  apiConfig["headers"] = {
     "Content-Type": "application/json",
     Authorization: `Token ${userLocal.token}`,
-  },
-};
+  };
+}
 
 export const UserContextProvider = ({ children }) => {
   const navigate = useNavigate();
