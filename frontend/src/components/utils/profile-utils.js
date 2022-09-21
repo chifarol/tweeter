@@ -1,12 +1,6 @@
 import React, { useState, useContext } from "react";
 import axios from "axios";
-const user = JSON.parse(localStorage.getItem("user"));
-const config = {
-  headers: {
-    "Content-Type": "application/json",
-    Authorization: `Token ${user.token}`,
-  },
-};
+
 /**
  * api wrapper to update user profile
  *
@@ -24,6 +18,13 @@ export function updateProfile(
   phone,
   header_pic
 ) {
+  const user = JSON.parse(localStorage.getItem("user"));
+  const config = {
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Token ${user.token}`,
+    },
+  };
   const body = {};
   if (display_name) {
     body.display_name = display_name;
@@ -64,6 +65,13 @@ export const goToProfile = (username) => {
  * @return {object} promise object containing specified user tweets
  */
 export function getTargetUserTweets(targetUsername, pTLContext) {
+  const user = JSON.parse(localStorage.getItem("user"));
+  const config = {
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Token ${user.token}`,
+    },
+  };
   return new Promise(function (resolve, reject) {
     setTimeout(() => {
       axios
@@ -84,6 +92,13 @@ export function getTargetUserTweets(targetUsername, pTLContext) {
  * @return {object} promise object containing profile of specified user
  */
 export function getTargetUserProfile(targetUsername) {
+  const user = JSON.parse(localStorage.getItem("user"));
+  const config = {
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Token ${user.token}`,
+    },
+  };
   return new Promise(function (resolve, reject) {
     setTimeout(() => {
       axios
@@ -104,6 +119,13 @@ export function getTargetUserProfile(targetUsername) {
  * @return {object} promise object specifying follow/unfollow status
  */
 export function followUtil(username) {
+  const user = JSON.parse(localStorage.getItem("user"));
+  const config = {
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Token ${user.token}`,
+    },
+  };
   return new Promise(function (resolve, reject) {
     setTimeout(() => {
       axios

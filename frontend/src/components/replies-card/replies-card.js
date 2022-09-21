@@ -1,7 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
 import "./replies-card.scss";
 import { getDateTimeString } from "../utils/tweet-utils";
-import { config } from "../utils/tweet-utils";
 import UserContext from "../contexts/usercontext";
 import { goToProfile } from "../utils/profile-utils";
 import axios from "axios";

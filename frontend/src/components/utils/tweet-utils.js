@@ -14,6 +14,13 @@ import { tweetImageUpload } from "./image-upload";
  * @return {object} promise object containing follow suggestions
  */
 export function followSuggestions() {
+  const userLocal = JSON.parse(localStorage.getItem("user"));
+  const config = {
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Token ${userLocal.token}`,
+    },
+  };
   return new Promise(function (resolve, reject) {
     setTimeout(() => {
       axios
@@ -33,6 +40,13 @@ export function followSuggestions() {
  * @return {object} promise object containing trends words
  */
 export function getTrends() {
+  const userLocal = JSON.parse(localStorage.getItem("user"));
+  const config = {
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Token ${userLocal.token}`,
+    },
+  };
   return new Promise(function (resolve, reject) {
     setTimeout(() => {
       axios
@@ -55,6 +69,13 @@ export function getTrends() {
  * @return {object} promise object containing trends words
  */
 export function searchTweets(search, searchTypeContext) {
+  const userLocal = JSON.parse(localStorage.getItem("user"));
+  const config = {
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Token ${userLocal.token}`,
+    },
+  };
   return new Promise(function (resolve, reject) {
     setTimeout(() => {
       axios
@@ -75,6 +96,13 @@ export function searchTweets(search, searchTypeContext) {
  * @return {object} promise object containing tweets for user page
  */
 export function getTLTweets(TLContext) {
+  const userLocal = JSON.parse(localStorage.getItem("user"));
+  const config = {
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Token ${userLocal.token}`,
+    },
+  };
   return new Promise(function (resolve, reject) {
     setTimeout(() => {
       axios
@@ -97,6 +125,13 @@ export function getTLTweets(TLContext) {
  * @return {object} promise object containing tweet creation status
  */
 export function createTweetReply(body, id) {
+  const userLocal = JSON.parse(localStorage.getItem("user"));
+  const config = {
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Token ${userLocal.token}`,
+    },
+  };
   return new Promise(function (resolve, reject) {
     setTimeout(() => {
       axios
@@ -116,6 +151,13 @@ export function createTweetReply(body, id) {
  * @return {object} promise object containing tweet creation status
  */
 function createTweet(body) {
+  const userLocal = JSON.parse(localStorage.getItem("user"));
+  const config = {
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Token ${userLocal.token}`,
+    },
+  };
   return new Promise(function (resolve, reject) {
     setTimeout(() => {
       axios
@@ -135,6 +177,13 @@ function createTweet(body) {
  * @return {object} promise object containing tweet creation status
  */
 export function createTweetPix(tweetId, tweetPix) {
+  const userLocal = JSON.parse(localStorage.getItem("user"));
+  const config = {
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Token ${userLocal.token}`,
+    },
+  };
   return new Promise(function (resolve, reject) {
     if (isNaN(tweetId)) {
       reject(new Error("invalid tweet id", tweetId));
