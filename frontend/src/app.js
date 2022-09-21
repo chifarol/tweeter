@@ -17,7 +17,7 @@ import P404 from "./components/404/404";
 
 function App() {
   let userFromLocal = JSON.parse(localStorage.getItem("user"));
-  if (!userLocal) {
+  if (!userFromLocal) {
     localStorage.setItem(
       "user",
       JSON.stringify({ username: null, token: null, auth: false })
