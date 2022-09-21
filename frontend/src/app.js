@@ -16,7 +16,15 @@ import { Route, Routes } from "react-router-dom";
 import P404 from "./components/404/404";
 
 function App() {
-  const userFromLocal = JSON.parse(localStorage.getItem("user"));
+  let userFromLocal = JSON.parse(localStorage.getItem("user"));
+  if (!userLocal) {
+    localStorage.setItem(
+      "user",
+      JSON.stringify({ username: null, token: null, auth: false })
+    );
+    userFromLocal = JSON.parse(localStorage.getItem("user"));
+    navigate("/login");
+  }
 
   return (
     <Routes>

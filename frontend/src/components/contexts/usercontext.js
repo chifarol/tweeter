@@ -7,8 +7,13 @@ const UserContext = createContext();
 // config object for api
 let apiConfig = {};
 // user info from local storage
-const userLocal = JSON.parse(localStorage.getItem("user"));
-if (!userLocal.token || !userLocal.auth) {
+let userLocal = JSON.parse(localStorage.getItem("user"));
+if (!userLocal) {
+  localStorage.setItem(
+    "user",
+    JSON.stringify({ username: null, token: null, auth: false })
+  );
+  userFromLocal = JSON.parse(localStorage.getItem("user"));
   navigate("/login");
 } else {
   apiConfig["headers"] = {
