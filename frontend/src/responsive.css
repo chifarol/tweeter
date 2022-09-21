@@ -6,6 +6,7 @@
 @media screen and (max-width: 480px) {
   #app {
     /* padding-top: 65px; */
+    overflow-x: hidden;
     background-color: #f2f2f2;
   }
 

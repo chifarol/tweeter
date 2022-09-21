@@ -10,7 +10,6 @@ import UserContext from "../contexts/usercontext";
 function Profile() {
   const navigate = useNavigate();
   const user = JSON.parse(localStorage.getItem("user"));
-  const userC = useContext(UserContext);
   const [profileImage, setProfileImage] = useState("");
   const [headerImage, setHeaderImage] = useState("");
   const [profileUrl, setProfileUrl] = useState("");

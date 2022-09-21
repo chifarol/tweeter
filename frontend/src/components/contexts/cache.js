@@ -9,7 +9,6 @@ export function clearCache() {
   localStorage.setItem("explore", JSON.stringify([]));
   localStorage.setItem("bookmarks", JSON.stringify([]));
   localStorage.setItem("users", JSON.stringify([]));
-  localStorage.setItem("userprofile", JSON.stringify({}));
 }
 
 /**

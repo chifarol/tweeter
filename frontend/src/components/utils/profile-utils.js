@@ -44,7 +44,9 @@ export function updateProfile(
   axios
     .post("/api/user/update/", body, config)
     .then((res) => {
-      window.location.reload();
+      //reset related cache
+      localStorage.setItem("users", JSON.stringify([]));
+      localStorage.setItem("userprofile", JSON.stringify({}));
     })
     .catch((err) => console.log(err.response.data));
 }
