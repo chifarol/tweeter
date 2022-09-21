@@ -1,118 +1,121 @@
 /* medium screen */
-@media screen and (max-width: 768px) and (min-width: 481px) {}
+@media screen and (max-width: 768px) and (min-width: 481px) {
+}
 
 /* small screen */
 @media screen and (max-width: 480px) {
-    #app {
-        padding-top: 65px;
-        background-color: #F2F2F2;
-    }
+  #app {
+    /* padding-top: 65px; */
+    background-color: #f2f2f2;
+  }
 
-    #header {
-        flex-direction: column;
-        display: none;
-    }
+  #header {
+    flex-direction: column;
+    display: none;
+  }
 
-    #header-profile-container {
-        flex-direction: column;
-    }
+  #header-profile-container {
+    flex-direction: column;
+  }
 
-    #header-profile-expander {
-        margin-left: 8px;
-    }
+  #header-profile-expander {
+    margin-left: 8px;
+  }
 
-    .profile-proper-left img {
-        top: -128px;
-        left: 50%;
-    }
+  .profile-proper-left img {
+    top: -128px;
+    left: 50%;
+  }
 
-    .profile-header {
-        margin-bottom: 108px;
-    }
+  .profile-header {
+    margin-bottom: 108px;
+  }
 
-    .profile-proper {
-        flex-direction: column;
-        width: 94%;
-        margin-left: 2%;
-        top: 250px;
-        height: fit-content;
-    }
+  .profile-proper {
+    flex-direction: column;
+    width: 94%;
+    margin-left: 2%;
+    top: 250px;
+    height: fit-content;
+  }
 
-    .profile-proper-right {
-        padding-top: 40px;
-        margin-left: 0;
-    }
+  .profile-proper-right {
+    padding-top: 40px;
+    margin-left: 0;
+  }
 
-    .profile-proper-right-info {
-        flex-direction: column;
-    }
+  .profile-proper-right-info {
+    flex-direction: column;
+  }
 
-    .profile-proper-right-metrics {
-        margin: 0 auto;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
+  .profile-proper-right-metrics {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
 
-    .profile-proper-right-bio {
-        margin: 8px auto;
-    }
+  .profile-proper-right-bio {
+    margin: 8px auto;
+  }
 
-    .profile-proper-follow-button-small {
-        display: flex;
-        margin: 0 auto;
-    }
+  .profile-proper-follow-button-small {
+    display: flex;
+    margin: 0 auto;
+  }
 
-    .profile-proper-follow-button-big {
-        display: none;
-    }
+  .profile-proper-follow-button-big {
+    display: none;
+  }
+  .profile-modal {
+    width: 100%;
+  }
+  #main {
+    background-color: #f2f2f2;
+    width: 100%;
+    padding: 90px 4%;
+  }
 
-    #main {
-        background-color: #F2F2F2;
-        width: 100%;
-        padding: 15px 4%;
-    }
+  .left-sidebar-style {
+    display: block;
+  }
 
-    .left-sidebar-style {
-        display: block;
-    }
+  .mobile-mt40 {
+    /* margin-top: 40px; */
+  }
 
-    .mobile-mt40 {
-        margin-top: 40px;
-    }
+  .right-sidebar-style {
+    display: block;
+  }
 
-    .right-sidebar-style {
-        display: block;
-    }
+  .timeline-container {
+    min-width: unset;
+  }
 
-    .timeline-container {
-        min-width: unset;
-    }
+  .timeline-middle-tweet-image-container {
+    width: 100%;
+    max-height: 480px;
+    overflow: hidden;
+  }
 
-    .timeline-middle-tweet-image-container {
-        width: 100%;
-        max-height: 480px;
-        overflow: hidden;
-    }
+  .timeline-bottom-middle-item span {
+    display: none;
+  }
 
-    .timeline-bottom-middle-item span {
-        display: none;
-    }
+  .header-pop-up {
+    right: 15px;
+  }
 
-    .header-pop-up {
-        right: 15px;
-    }
+  .tweet-boxx-card {
+    margin-top: 80px;
+  }
 
-    .tweet-boxx-card {
-        margin-top: 80px;
-    }
+  .modal-carousel-image-container {
+    height: unset;
+  }
 
-    .modal-carousel-image-container {
-        height: unset;
-    }
-
-    #modal-full-image {
-        max-width: 100%;
-        max-height: 135px;
-    }
+  #modal-full-image {
+    max-width: 100%;
+    max-height: 135px;
+  }
 }
