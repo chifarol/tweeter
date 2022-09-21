@@ -14,7 +14,7 @@ if (!userLocal) {
     "user",
     JSON.stringify({ username: null, token: null, auth: false })
   );
-  userFromLocal = JSON.parse(localStorage.getItem("user"));
+  userLocal = JSON.parse(localStorage.getItem("user"));
   navigate("/login");
 } else {
   apiConfig["headers"] = {
