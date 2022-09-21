@@ -13,21 +13,25 @@ function ReplyCard({ e }) {
     e.likes.some((e) => e.id === userProfile.id)
   );
   function likeReply() {
+    const userLocal = JSON.parse(localStorage.getItem("user"));
+    const config = {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Token ${userLocal.token}`,
+      },
+    };
     axios
       .post(`/api/tweet/${e.id}/like`, {}, config)
       .then((res) => {
-        console.log("liked", res.data);
         setLikeState(!likeState);
         let oldLikeCount = likeCount;
         if (res.data.status === "unliked") {
-          console.log("b4 comment like", likeCount);
           e.likes.splice(
             e.likes.findIndex((e) => e.id === userProfile.id),
             1
           );
           setLikeCount(oldLikeCount - 1);
         } else if (res.data.status === "liked") {
-          console.log("after comment like", likeCount);
           e.likes.unshift(userProfile);
           setLikeCount(oldLikeCount + 1);
         }

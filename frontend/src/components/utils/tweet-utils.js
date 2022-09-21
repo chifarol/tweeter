@@ -2,13 +2,6 @@ import React, { useContext } from "react";
 import axios from "axios";
 import { tweetImageUpload } from "./image-upload";
 
-const userLocal = JSON.parse(localStorage.getItem("user"));
-export const config = {
-  headers: {
-    "Content-Type": "application/json",
-    Authorization: `Token ${userLocal.token}`,
-  },
-};
 // /**
 //  * API wrapper to get follow suggestions
 //  *
