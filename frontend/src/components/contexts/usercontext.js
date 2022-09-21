@@ -8,6 +8,7 @@ const UserContext = createContext();
 let apiConfig = {};
 // user info from local storage
 let userLocal = JSON.parse(localStorage.getItem("user"));
+
 if (!userLocal) {
   localStorage.setItem(
     "user",
