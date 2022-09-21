@@ -47,6 +47,7 @@ export function updateProfile(
       //reset related cache
       localStorage.setItem("users", JSON.stringify([]));
       localStorage.setItem("userprofile", JSON.stringify({}));
+      window.location.reload();
     })
     .catch((err) => console.log(err.response.data));
 }

@@ -70,32 +70,14 @@ export const UserContextProvider = ({ children }) => {
 
   // get user's profile object containing profile & header pictures, display name, followers/followings etc
   function getUserProfile() {
-    let userProfileCache = JSON.parse(localStorage.getItem("userprofile"));
-    // if user profile cache exists
-    if (userProfileCache && userProfileCache.username) {
-      axios
-        .get(`/api/authstatus/`, apiConfig) // check auth state using user cache profile info
-        .then((res) => {
-          // if valid update userProfile state
-          res.data.valid === true && setUserProfile(userProfileCache);
-        })
-        .catch((e) => {
-          // if invalid auth redirect to login
-          navigate("/login");
-        });
-    }
-    // if no user profile cache exists
-    else {
-      axios
-        .get(`/api/user/`, apiConfig)
-        .then((res) => {
-          setUserProfile(res.data);
-          localStorage.setItem("userprofile", JSON.stringify(res.data));
-        })
-        .catch((e) => {
-          navigate("/login");
-        });
-    }
+    axios
+      .get(`/api/user/`, apiConfig)
+      .then((res) => {
+        setUserProfile(res.data);
+      })
+      .catch((e) => {
+        navigate("/login");
+      });
   }
   useEffect(() => {
     getUserProfile();
