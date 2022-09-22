@@ -121,8 +121,11 @@ function Header(props) {
 
       <TweetButton />
       {openTweetBox && <TweetBox />}
-      <div>
+      <div id="main-container">
         <Outlet />
+        <span className="author-footer f12 gray2 w300">
+          Built by ilodigwechinaza@gmail.com
+        </span>
       </div>
       <HeaderSmallBottom />
     </>

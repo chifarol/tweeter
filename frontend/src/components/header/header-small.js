@@ -10,6 +10,7 @@ export function HeaderSmallTop() {
   const togglePopUp = () => {
     setShowPopUp(!showPopUp);
   };
+
   return (
     <div id="header-small-top">
       <div id="header-small-logo-container">
