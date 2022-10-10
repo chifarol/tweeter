@@ -4,7 +4,7 @@ import UserContext from "../contexts/usercontext";
 import "./auth.scss";
 import axios from "axios";
 import AlertContext from "../contexts/alert";
-import { Spinner } from "../loading-spinner/spinner";
+import { Spinner } from "../../../../../../studybuddy/frontend/src/components/loading-spinner/spinner";
 import { clearCache } from "../contexts/cache";
 
 export function authLogout(apiConfig, userDispatch) {

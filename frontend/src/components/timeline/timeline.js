@@ -4,7 +4,7 @@ import "./timeline.scss";
 import axios from "axios";
 import UserContext from "../contexts/usercontext";
 import AlertContext from "../contexts/alert";
-import { Spinner } from "../loading-spinner/spinner";
+import { Spinner } from "../../../../../../studybuddy/frontend/src/components/loading-spinner/spinner";
 import TimelineCard from "./timeline-card";
 
 function Timeline({ tweets }) {

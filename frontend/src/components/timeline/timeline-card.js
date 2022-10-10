@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import axios from "axios";
 import { createTweetPix, createTweetReply } from "../utils/tweet-utils";
 import { getFilePath, tweetImageUpload } from "../utils/image-upload";
-import { Spinner } from "../loading-spinner/spinner";
+import { Spinner } from "../../../../../../studybuddy/frontend/src/components/loading-spinner/spinner";
 import FollowModal from "../modal/follow-modal";
 import { goToProfile } from "../utils/profile-utils";
 import ImageModal from "../modal/image-modal";

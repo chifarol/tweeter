@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./tweet-box.scss";
 import axios from "axios";
 import UserContext from "../contexts/usercontext";
-import { Spinner } from "../loading-spinner/spinner";
+import { Spinner } from "../../../../../../studybuddy/frontend/src/components/loading-spinner/spinner";
 import AlertContext from "../contexts/alert";
 import imageUpload, { getFilePath } from "../utils/image-upload";
 import { tweetImageUpload } from "../utils/image-upload";

@@ -1,6 +1,6 @@
 import "./follow-modal.scss";
 import React, { useState, useContext, useEffect } from "react";
-import { Spinner } from "../loading-spinner/spinner";
+import { Spinner } from "../../../../../../studybuddy/frontend/src/components/loading-spinner/spinner";
 import UserContext from "../contexts/usercontext";
 import { followUtil } from "../utils/profile-utils";
 import { useNavigate } from "react-router-dom";

@@ -1,5 +1,4 @@
-import React, { useContext, useEffect, useCallback } from "react";
-import { Outlet, useNavigate } from "react-router-dom";
+import React from "react";
 import Header from "./components/header/header";
 import Home from "./components/home/home";
 import Bookmark from "./components/bookmark/bookmark";
@@ -8,7 +7,6 @@ import ProfileRouter from "./components/profile-tl/profie-router";
 import Profile from "./components/profile/profile";
 import Auth from "./components/auth/auth";
 import Private from "./components/utils/private";
-import UserContext from "./components/contexts/usercontext";
 import "./app.css";
 import "./responsive.css";
 

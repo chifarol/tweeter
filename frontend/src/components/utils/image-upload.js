@@ -51,7 +51,7 @@ function imageUpload(file, type) {
       const config = {
         headers: {
           "Content-Type": "application/json",
-          Authorizationn: `Token ${user.token}`,
+          Authorization: `Token ${user.token}`,
         },
       };
       axios
@@ -100,7 +100,7 @@ export function tweetImageUpload(files) {
       const config = {
         headers: {
           "Content-Type": "application/json",
-          Authorizationn: `Token ${user.token}`,
+          Authorization: `Token ${user.token}`,
         },
       };
       // initialize file url array
