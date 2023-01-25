@@ -184,18 +184,18 @@ export const CacheContextProvider = ({ children }) => {
   }
 
   useEffect(() => {
-    // clear the following cache after 2 minutes of component mount
+    // clear the following cache after 1 minute of component mount
     setTimeout(() => {
       setTrendCache([]);
       setFollowSugCache([]);
       setHomeCache([]);
-    }, 2 * 1000 * 60);
-    // clear the following cache after 20 minutes of component mount
+    }, 1 * 1000 * 60);
+    // clear the following cache after 1 minute of component mount
     setTimeout(() => {
       localStorage.setItem("explore", JSON.stringify([]));
       localStorage.setItem("bookmarks", JSON.stringify([]));
       localStorage.setItem("users", JSON.stringify([]));
-    }, 20 * 1000 * 60);
+    }, 1 * 1000 * 60);
   }, []);
 
   const value = {

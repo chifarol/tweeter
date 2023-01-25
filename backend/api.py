@@ -27,7 +27,7 @@ def main_user(req):
         'email':req.user.email,
         'username':req.user.username,
         'profile':profile.data,
-        # 'tweets':tweets.data,
+        # 'tweets':tweets.data, 
         'following':following.data,
         'followers':followers.data,
         })
@@ -333,15 +333,17 @@ import cloudinary
 from pathlib import Path
 import time
 import os
+
 import environ
-BASE_DIR = Path(__file__).resolve().parent.parent
+# Initialise environment variables
 env = environ.Env()
-environ.Env.read_env(env.str(BASE_DIR, '/tweeter/.env'))
+environ.Env.read_env()
+BASE_DIR = Path(__file__).resolve().parent.parent
 @api_view(['POST'])
 # @permission_classes((IsAuthenticated,))
 def cloudinary_signature(req):
     params_to_sign = req.data['params']
     timestamp =  int((time.time()))
-    api_secret = os.getenv("CLOUD_SECRET")
+    api_secret = env("CLOUD_SECRET")
     signature = cloudinary.utils.api_sign_request({**params_to_sign, 'timestamp':timestamp}, api_secret)
     return JsonResponse({'signature':signature, "timestamp":timestamp})

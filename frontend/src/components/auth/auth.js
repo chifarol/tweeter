@@ -98,6 +98,8 @@ function Auth({ type }) {
             "Unable to log in with provided credentials."
           ) {
             setLoginMsg("Wrong username or password");
+          } else {
+            setLoginMsg("Sorry, Something went wrong from our side");
           }
           console.log(err);
         });
@@ -135,6 +137,8 @@ function Auth({ type }) {
             "A user with that username already exists."
           ) {
             setLoginMsg("A user with that username already exists.");
+          } else {
+            setLoginMsg("Sorry, Something went wrong from our side");
           }
           console.log(err);
         });

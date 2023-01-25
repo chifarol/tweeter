@@ -1,7 +1,11 @@
 from pathlib import Path
-import environ
 import os
+# use database connection strings in django 
 import dj_database_url
+import environ
+# Initialise environment variables
+env = environ.Env()
+environ.Env.read_env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -12,21 +16,20 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-env = environ.Env()
-environ.Env.read_env()
-# SECRET_KEY = env('SECRET_KEY')
-SECRET_KEY = os.environ.get('SECRET_KEY', env('SECRET_KEY'))
-CSRF_COOKIE_SECURE = True
-SESSION_COOKIE_SECURE= True
-SECURE_SSL_REDIRECT=True
+SECRET_KEY = env('SECRET_KEY')
+CSRF_COOKIE_SECURE = False
+SESSION_COOKIE_SECURE= False
+SECURE_SSL_REDIRECT=False
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'RENDER' not in os.environ
+ 
+DEBUG = True 
+if env('IS_PROD') == "TRUE":
+    DEBUG = False 
 
 ALLOWED_HOSTS = []
-RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
-if RENDER_EXTERNAL_HOSTNAME:
-    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
+if env('IS_PROD') != "TRUE":
+    ALLOWED_HOSTS.append("*")
 
 INSTALLED_APPS = [
     'frontend',
@@ -83,14 +86,16 @@ WSGI_APPLICATION = 'tweeter.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+
 DATABASES = {
-    'default': dj_database_url.config(
-        # Feel free to alter this value to suit your needs.
-        default='postgresql://postgres:postgres@localhost:5432/mysite',
-        conn_max_age=600
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
 
+if env('IS_PROD') == 'TRUE':
+    DATABASES['default'] = dj_database_url.config(default=env('DATABASE_URL'))
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
