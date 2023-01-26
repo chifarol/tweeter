@@ -1,5 +1,4 @@
 import React, { useState, useContext, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import "./profile.scss";
 import axios from "axios";
 import imageUpload, { getFilePath } from "../utils/image-upload";
@@ -8,7 +7,6 @@ import { Spinner } from "../loading-spinner/spinner";
 import UserContext from "../contexts/usercontext";
 
 function Profile() {
-  const navigate = useNavigate();
   const user = JSON.parse(localStorage.getItem("user"));
   const [profileImage, setProfileImage] = useState("");
   const [headerImage, setHeaderImage] = useState("");
@@ -52,6 +50,7 @@ function Profile() {
   return (
     <div className="profile-modal-container gray1">
       <div className="profile-modal">
+        <button onClick={() => window.history.back()}>Back</button>
         <div>Edit Profile</div>
         <form>
           <div className="form-image-upload-container">
