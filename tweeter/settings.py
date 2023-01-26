@@ -27,7 +27,7 @@ DEBUG = True
 if env('IS_PROD') == "TRUE":
     DEBUG = False 
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['tweeter-react-django.onrender.com']
 if env('IS_PROD') != "TRUE":
     ALLOWED_HOSTS.append("*")
 
